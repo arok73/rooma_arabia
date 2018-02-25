@@ -1,3 +1,4 @@
+#rooma-arabia muunnin sovelluksen testit
 import unittest
 import rooma_arabia_muunnin
 
@@ -59,10 +60,12 @@ class TestRooma_Arabia(unittest.TestCase):
                      (3940, 'MMMCMXL'),
                      (3999, 'MMMCMXCIX'))
 
+    # testitaulukon arvoparit läpikäyvä arabialaisesta-luvusta roomalaiseksi-luvuksi testifunktio
     def test_arabiasta_roomaan(self):
         for kokonaisluku, merkki in self.testi_taulukko:
             self.assertEqual(rooma_arabia_muunnin.arabiasta_roomaan(kokonaisluku), merkki)
 
+    # testitaulukon arvoparit läpikäyvä roomalaisesta-luvusta arabialaiseksi-luvuksi testifunktio
     def test_roomasta_arabiaan(self):
         for kokonaisluku, merkki in self.testi_taulukko:
             self.assertEqual(rooma_arabia_muunnin.roomasta_arabiaan(merkki), kokonaisluku)
